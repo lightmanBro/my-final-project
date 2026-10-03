@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoundWave — Music Discovery Dashboard | WDD 330</title>
+  <meta name="description" content="Music Discovery Dashboard created by Omotoso David for WDD 330. Explore trending artists, stream audio previews, search live music, and view track metadata." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <!-- Global Navigation Header -->
+  <header class="site-header" id="mainHeader">
+    <a href="/" class="brand" title="SoundWave Home">
+      <div class="brand-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18V5l12-2v13" stroke="url(#hGrad)"/>
+          <circle cx="6" cy="18" r="3" fill="#00f2fe"/>
+          <circle cx="18" cy="16" r="3" fill="#9d4edd"/>
+          <defs>
+            <linearGradient id="hGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#00f2fe"/>
+              <stop offset="100%" stop-color="#9d4edd"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div>
+        <span class="brand-title">SoundWave</span>
+        <span class="brand-subtitle">Music Discovery</span>
+      </div>
+    </a>
+
+    <!-- Live Search Input -->
+    <div class="search-bar-wrapper">
+      <div class="search-input-box">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input 
+          type="search" 
+          id="searchInput" 
+          class="search-input" 
+          placeholder="Search artists, songs, genres, albums..." 
+          autocomplete="off"
+          aria-label="Search catalogue"
+        />
+        <button id="searchClearBtn" class="search-clear-btn" aria-label="Clear search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation & Project Modals -->
+    <nav class="header-nav" aria-label="Primary navigation">
+      <a href="/" class="nav-link active">Dashboard</a>
+      <a href="/artist/index.html?name=Burna%20Boy" class="nav-link">Artist Spotlight</a>
+      <a href="/wireframes/index.html" class="nav-link">Wireframes &amp; Arch</a>
+      <button id="openScopeBtn" class="nav-badge-btn" title="View Week 5 Deliverables Status">
+        <span>⚡ Week 5 Scope</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Application Body -->
+  <main class="main-container">
+    <!-- Hero Showcase Section -->
+    <section class="hero-banner" aria-label="Featured showcase">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span style="font-size: 0.9rem;">✨</span> Featured Discovery • Week 5
+        </div>
+        <h1 class="hero-title">
+          Explore Music Without <span class="gradient-text">Boundaries</span>
+        </h1>
+        <p class="hero-description">
+          Seamlessly discover top chart anthems, stream 30-second audio previews, and uncover verified artist discographies powered by live multi-source APIs.
+        </p>
+        <div class="hero-actions">
+          <button id="heroPlayBtn" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            Play Spotlight Track
+          </button>
+          <a href="/wireframes/index.html" class="btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+              <line x1="9" y1="21" x2="9" y2="9"/>
+            </svg>
+            Inspect Wireframes
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="featured-card">
+          <img 
+            id="spotlightCover"
+            src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&auto=format&fit=crop&q=80" 
+            alt="Spotlight Album Cover" 
+            class="featured-art"
+          />
+          <div class="featured-meta">
+            <span class="featured-song-title" id="spotlightTitle">City Boys</span>
+            <span class="featured-artist-name" id="spotlightArtist">Burna Boy • I Told Them...</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters & Categories Toolbar -->
+    <section class="filter-bar" aria-label="Search filter controls">
+      <div class="filter-row">
+        <!-- Entity Tabs -->
+        <div class="tab-pills" role="tablist">
+          <button class="tab-pill active" data-type="all" role="tab" aria-selected="true">All Entities</button>
+          <button class="tab-pill" data-type="song" role="tab" aria-selected="false">Tracks / Songs</button>
+          <button class="tab-pill" data-type="artist" role="tab" aria-selected="false">Artists</button>
+          <button class="tab-pill" data-type="album" role="tab" aria-selected="false">Albums</button>
+        </div>
+
+        <!-- Quick Genre Filter Chips -->
+        <div class="genre-chips-scroll" id="genreChipsList">
+          <button class="genre-chip" data-genre="Afrobeats">🔥 Afrobeats</button>
+          <button class="genre-chip" data-genre="Pop">✨ Pop</button>
+          <button class="genre-chip" data-genre="Hip-Hop">🎤 Hip-Hop</button>
+          <button class="genre-chip" data-genre="R&B">🎷 R&amp;B</button>
+          <button class="genre-chip" data-genre="Synthwave">🌆 Synthwave</button>
+          <button class="genre-chip" data-genre="Alternative">🎸 Rock / Alt</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Search & Filter Results Section -->
+    <section class="search-results-section" aria-label="Search Results">
+      <div id="searchFeedbackBar" class="search-feedback-bar" style="display: none;"></div>
+      <div id="searchResultsContainer" class="grid-tracks">
+        <!-- Dynamically rendered via Search.mjs -->
+      </div>
+    </section>
+
+    <!-- Trending Artists Section (Week 5 Wireframe Requirement) -->
+    <section class="trending-artists-section" aria-label="Trending Artists">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>🔥</span> Trending Artists
+        </h2>
+        <span class="section-badge">Live API Ready</span>
+      </div>
+      <div id="trendingArtistsContainer" class="grid-artists">
+        <!-- Dynamically rendered via main.js -->
+      </div>
+    </section>
+
+    <!-- Curated Discovery Recommendations -->
+    <section class="recommendations-section" aria-label="Recommended Tracks">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>🎧</span> Curated Recommendations
+        </h2>
+        <span class="section-badge">30s HD Audio Stream</span>
+      </div>
+      <div id="recommendationsContainer" class="grid-tracks">
+        <!-- Dynamically rendered via main.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Persistent Bottom Mini Audio Player -->
+  <footer class="audio-player-bar" id="audioPlayerBar" aria-label="Audio player preview">
+    <!-- Left: Currently Playing Info -->
+    <div class="player-track-info">
+      <img 
+        id="playerThumb" 
+        src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=100&auto=format&fit=crop&q=80" 
+        alt="Now Playing Cover" 
+        class="player-thumb"
+      />
+      <div class="player-meta">
+        <span id="playerTitle" class="player-title">Select a track to preview</span>
+        <span id="playerArtist" class="player-artist">Ready to play</span>
+      </div>
+    </div>
+
+    <!-- Center: Playback Controls & Timeline -->
+    <div class="player-controls-center">
+      <div class="player-buttons">
+        <button class="btn-ctrl" id="playerPrevBtn" title="Previous preview" aria-label="Previous track">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="19 20 9 12 19 4 19 20"/>
+            <line x1="5" y1="19" x2="5" y2="5" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+        <button class="btn-play-main" id="playerPlayBtn" title="Play / Pause preview" aria-label="Play / Pause">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+        </button>
+        <button class="btn-ctrl" id="playerNextBtn" title="Next preview" aria-label="Next track">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 4 15 12 5 20 5 4"/>
+            <line x1="19" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="player-timeline">
+        <span id="playerCurrentTime">0:00</span>
+        <div class="progress-bar-container" id="playerProgressBar" role="slider" aria-label="Track progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar-fill" id="playerProgressFill"></div>
+        </div>
+        <span id="playerTotalTime">0:30</span>
+      </div>
+    </div>
+
+    <!-- Right: Volume Controls -->
+    <div class="player-extras">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--text-muted);">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+      </svg>
+      <input type="range" min="0" max="1" step="0.05" value="0.8" class="volume-slider" id="playerVolumeSlider" aria-label="Volume controller" />
+    </div>
+  </footer>
+
+  <!-- Week 5 Deliverable Scope Modal -->
+  <div class="modal-backdrop" id="scopeModal" role="dialog" aria-modal="true" aria-labelledby="scopeModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2 id="scopeModalTitle" class="modal-title">⚡ Week 5 Deliverables &amp; System Architecture</h2>
+        <button class="modal-close-btn" id="closeScopeModalBtn" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="wireframe-schema-card">
+          <span class="wireframe-tag">Week 5 Objectives</span>
+          <p style="color: var(--text-main); font-size: 0.95rem; margin-top: 0.4rem; line-height: 1.6;">
+            <strong>Student:</strong> Omotoso David | <strong>Course:</strong> WDD 330 Web Frontend Development II
+          </p>
+          <div class="blueprint-grid">
+            <div class="blueprint-box">
+              <span>✅ 1. Comprehensive Wireframes (Home Dashboard &amp; Artist Page)</span>
+              <span>Complete &amp; Interactive</span>
+            </div>
+            <div class="blueprint-box">
+              <span>✅ 2. API Integration Setup (Live Multi-Source + Offline Fallback Engine)</span>
+              <span>iTunes + Spotify + Local JSON</span>
+            </div>
+            <div class="blueprint-box">
+              <span>✅ 3. Basic &amp; Advanced Search (Live Debounced Querying &amp; Filtering)</span>
+              <span>Real-Time Filter Pills &amp; Genres</span>
+            </div>
+            <div class="blueprint-box">
+              <span>✅ 4. Interactive Audio Preview Player with Scrubbing &amp; Visualizers</span>
+              <span>Fully Functional</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--accent-cyan);">Architecture Roadmap</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;">
+            <strong>Week 5 (Current):</strong> Wireframes, API integration setup, responsive search UI, audio preview engine.<br/>
+            <strong>Week 6:</strong> Implement synchronized lyrics, personalized recommendations, and playlist manager.<br/>
+            <strong>Week 7:</strong> Social media sharing, visual audio equalizer, and production deployment polish.
+          </p>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.8rem;">
+          <a href="/wireframes/index.html" class="btn-primary" style="font-size: 0.88rem;">Open Full Wireframes Spec</a>
+          <button class="btn-secondary" id="closeScopeModalBtn2" style="font-size: 0.88rem;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Entry Script -->
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireframes &amp; Technical Architecture — SoundWave | WDD 330</title>
+  <meta name="description" content="Week 5 interactive wireframes and API architectural blueprints for SoundWave Music Discovery Dashboard." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    .wireframe-container {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .mockup-frame {
+      background: var(--bg-secondary);
+      border: 2px solid var(--border-glow);
+      border-radius: var(--radius-lg);
+      padding: 1.8rem;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    .mockup-header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px dashed rgba(0, 242, 254, 0.3);
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .wireframe-diagram {
+      border: 1px dashed rgba(255, 255, 255, 0.2);
+      background: rgba(10, 13, 20, 0.7);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .wf-block {
+      border: 1px dashed var(--accent-cyan);
+      background: rgba(0, 242, 254, 0.04);
+      padding: 1rem;
+      border-radius: var(--radius-sm);
+      position: relative;
+    }
+
+    .wf-badge {
+      position: absolute;
+      top: -10px;
+      right: 12px;
+      background: var(--gradient-glow);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.15rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    .wf-label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-bottom: 0.3rem;
+    }
+
+    .wf-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .table-spec {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      font-size: 0.86rem;
+    }
+
+    .table-spec th, .table-spec td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .table-spec th {
+      background: var(--bg-tertiary);
+      color: var(--accent-cyan);
+      font-weight: 700;
+    }
+
+    .table-spec tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+  </style>
+</head>
+<body>
+  <!-- Global Header -->
+  <header class="site-header">
+    <a href="/" class="brand">
+      <div class="brand-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18V5l12-2v13" stroke="url(#hGrad)"/>
+          <circle cx="6" cy="18" r="3" fill="#00f2fe"/>
+          <circle cx="18" cy="16" r="3" fill="#9d4edd"/>
+        </svg>
+      </div>
+      <div>
+        <span class="brand-title">SoundWave</span>
+        <span class="brand-subtitle">Music Discovery</span>
+      </div>
+    </a>
+
+    <nav class="header-nav">
+      <a href="/" class="nav-link">← Home Dashboard</a>
+      <a href="/artist/index.html?name=Burna%20Boy" class="nav-link">Artist Page</a>
+    </nav>
+  </header>
+
+  <main class="main-container wireframe-container">
+    <!-- Intro Banner -->
+    <section class="hero-banner" style="grid-template-columns: 1fr;">
+      <div class="hero-content">
+        <div class="hero-tag">📐 Week 5 Deliverables</div>
+        <h1 class="hero-title">Visual Wireframes &amp; Architectural Specifications</h1>
+        <p class="hero-description">
+          Detailed blueprint schematics for the two primary views mandated in the project specification: 
+          <strong>(1) Home Dashboard</strong> and <strong>(2) Artist Profile Page</strong>, including external API mapping and data models.
+        </p>
+      </div>
+    </section>
+
+    <!-- Wireframe 1: Home Dashboard -->
+    <section class="mockup-frame" id="wf-dashboard">
+      <div class="mockup-header-bar">
+        <div>
+          <h2 style="color: var(--text-main); font-size: 1.4rem;">Wireframe 1: Home Dashboard View</h2>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Components: Top Navigation, Live Search Bar, Filter Pills, Spotlight Hero, Trending Artists, Recommendations, Audio Player</p>
+        </div>
+        <a href="/" class="btn-primary" style="font-size: 0.82rem; padding: 0.45rem 1rem;">View Live Dashboard →</a>
+      </div>
+
+      <div class="wireframe-diagram">
+        <!-- Header wireframe -->
+        <div class="wf-block">
+          <span class="wf-badge">Header / Nav</span>
+          <div class="wf-label">1. Global Navigation Bar &amp; Live Search Input</div>
+          <div class="wf-desc">Includes Logo, Debounced Search Bar with entity pills (All/Songs/Artists/Albums), Genre chips, and Quick Links.</div>
+        </div>
+
+        <!-- Hero Wireframe -->
+        <div class="wf-block" style="border-color: var(--accent-purple);">
+          <span class="wf-badge" style="background: var(--gradient-purple);">Hero Section</span>
+          <div class="wf-label" style="color: var(--accent-purple);">2. Featured Spotlight Hero Banner</div>
+          <div class="wf-desc">Dynamic highlight of trending single/album, direct 30-second HD preview trigger button, and album artwork showcase.</div>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="wf-block">
+          <span class="wf-badge">Filter Zone</span>
+          <div class="wf-label">3. Filter Controls &amp; Genre Selector</div>
+          <div class="wf-desc">Instant filter pills (All, Songs, Artists, Albums) and horizontal scrolling genre chips (Afrobeats, Pop, Hip-Hop, R&amp;B, etc.).</div>
+        </div>
+
+        <!-- Dynamic Results / Trending -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
+          <div class="wf-block" style="border-color: var(--accent-green);">
+            <span class="wf-badge" style="background: #00f59b; color: #000;">Trending Artists</span>
+            <div class="wf-label" style="color: var(--accent-green);">4. Trending Artists Carousel</div>
+            <div class="wf-desc">Circular avatar badges, follower counts, verified tag, links to Artist Page.</div>
+          </div>
+          <div class="wf-block" style="border-color: var(--accent-pink);">
+            <span class="wf-badge" style="background: #ff007f;">Recommendations</span>
+            <div class="wf-label" style="color: var(--accent-pink);">5. Curated Track Recommendations</div>
+            <div class="wf-desc">Grid of track cards featuring album art, duration, genre, and play overlay button.</div>
+          </div>
+        </div>
+
+        <!-- Bottom Player -->
+        <div class="wf-block" style="border-color: #f59e0b;">
+          <span class="wf-badge" style="background: #f59e0b; color: #000;">Persistent Player</span>
+          <div class="wf-label" style="color: #f59e0b;">6. Floating Bottom Audio Preview Bar</div>
+          <div class="wf-desc">Now-playing thumbnail, title, artist link, play/pause toggle, interactive timeline scrubber, and volume slider.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wireframe 2: Artist Page -->
+    <section class="mockup-frame" id="wf-artist">
+      <div class="mockup-header-bar">
+        <div>
+          <h2 style="color: var(--text-main); font-size: 1.4rem;">Wireframe 2: Artist Spotlight Page</h2>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Components: Artist Header with Banner, Top Tracks List, Bio &amp; Metadata, Lyrics Preview, Tour/Concerts Feed</p>
+        </div>
+        <a href="/artist/index.html?name=Burna%20Boy" class="btn-primary" style="font-size: 0.82rem; padding: 0.45rem 1rem;">View Live Artist Page →</a>
+      </div>
+
+      <div class="wireframe-diagram">
+        <!-- Artist Banner Wireframe -->
+        <div class="wf-block" style="border-color: var(--accent-cyan);">
+          <span class="wf-badge">Hero Banner</span>
+          <div class="wf-label">1. Artist Header &amp; Statistics</div>
+          <div class="wf-desc">Large backdrop banner image, high-res avatar, verified badge, genre label, monthly listeners count, and follower totals.</div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 1rem;">
+          <!-- Left Column -->
+          <div class="wf-block" style="border-color: var(--accent-purple);">
+            <span class="wf-badge" style="background: var(--gradient-purple);">Discography</span>
+            <div class="wf-label" style="color: var(--accent-purple);">2. Top Anthems &amp; Audio Previews</div>
+            <div class="wf-desc">List of top streamable tracks with real-time waveform visualizers on play.</div>
+            <div style="margin-top: 0.8rem; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 0.6rem;">
+              <div class="wf-label" style="color: var(--accent-purple);">3. Artist Biography &amp; Insights</div>
+              <div class="wf-desc">Detailed background history, Grammy/award milestones, musical style context.</div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="wf-block" style="border-color: var(--accent-green);">
+            <span class="wf-badge" style="background: #00f59b; color: #000;">Lyrics &amp; Events</span>
+            <div class="wf-label" style="color: var(--accent-green);">4. Synchronized Lyrics Preview</div>
+            <div class="wf-desc">Musixmatch API lyric excerpt card synced to currently active song preview.</div>
+            <div style="margin-top: 0.8rem; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 0.6rem;">
+              <div class="wf-label" style="color: var(--accent-green);">5. Tour Dates &amp; Concert Feeds</div>
+              <div class="wf-desc">Upcoming stadium and arena tour dates with live ticket availability badges.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Sources & API Mapping Table -->
+    <section class="mockup-frame">
+      <h2 style="color: var(--accent-cyan); font-size: 1.3rem; margin-bottom: 0.5rem;">External API &amp; Data Model Specifications</h2>
+      <p style="color: var(--text-muted); font-size: 0.88rem;">Each record handles 6-10+ attributes fulfilling the WDD 330 project requirements.</p>
+
+      <table class="table-spec">
+        <thead>
+          <tr>
+            <th>Attribute</th>
+            <th>Data Type</th>
+            <th>Source API</th>
+            <th>UI Component Binding</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>id</code></td>
+            <td>String (UUID)</td>
+            <td>iTunes / Spotify</td>
+            <td>DOM Data Attribute &amp; URL Router</td>
+          </tr>
+          <tr>
+            <td><code>title / trackName</code></td>
+            <td>String</td>
+            <td>iTunes / Spotify</td>
+            <td>Track Card &amp; Audio Player Header</td>
+          </tr>
+          <tr>
+            <td><code>artist / artistName</code></td>
+            <td>String</td>
+            <td>iTunes / Spotify</td>
+            <td>Artist Card, Track Card, Dynamic Filter</td>
+          </tr>
+          <tr>
+            <td><code>album / collectionName</code></td>
+            <td>String</td>
+            <td>iTunes / Spotify</td>
+            <td>Track Metadata &amp; Hero Spotlight</td>
+          </tr>
+          <tr>
+            <td><code>cover / artworkUrl</code></td>
+            <td>String (URL 600px)</td>
+            <td>iTunes / Spotify</td>
+            <td>Album Artwork &amp; Player Thumbnail</td>
+          </tr>
+          <tr>
+            <td><code>previewUrl</code></td>
+            <td>String (AAC/MP3 Stream)</td>
+            <td>Apple CDN / iTunes</td>
+            <td>HTML5 Audio Engine &amp; Visualizers</td>
+          </tr>
+          <tr>
+            <td><code>duration / durationMs</code></td>
+            <td>String / Integer</td>
+            <td>iTunes / Spotify</td>
+            <td>Track Timeline &amp; Scrubber</td>
+          </tr>
+          <tr>
+            <td><code>genre</code></td>
+            <td>String</td>
+            <td>iTunes / MusicBrainz</td>
+            <td>Genre Filter Chips &amp; Badges</td>
+          </tr>
+          <tr>
+            <td><code>lyricsPreview</code></td>
+            <td>String (Text)</td>
+            <td>Musixmatch API / Cache</td>
+            <td>Artist Sidebar Lyrics Card</td>
+          </tr>
+          <tr>
+            <td><code>upcomingConcerts</code></td>
+            <td>Array of Objects</td>
+            <td>Concert / Tour Feed</td>
+            <td>Artist Tour Dates List</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

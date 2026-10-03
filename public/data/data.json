@@ -1,0 +1,211 @@
+{
+  "artists": [
+    {
+      "id": "art_1",
+      "name": "Burna Boy",
+      "genre": "Afrobeats / Afro-Fusion",
+      "monthlyListeners": "18,450,200",
+      "followers": "7,820,000",
+      "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&auto=format&fit=crop&q=80",
+      "banner": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&auto=format&fit=crop&q=80",
+      "bio": "Grammy Award-winning Nigerian singer and songwriter, pioneering modern Afro-fusion with global chart-topping anthems across Africa, Europe, and the Americas.",
+      "topTracks": ["City Boys", "Last Last", "It's Plenty", "Ye", "Tested, Approved & Trusted"],
+      "upcomingConcerts": [
+        { "city": "London, UK", "venue": "London Stadium", "date": "Nov 14, 2026", "ticketStatus": "Available" },
+        { "city": "New York, USA", "venue": "Madison Square Garden", "date": "Dec 02, 2026", "ticketStatus": "Selling Fast" }
+      ]
+    },
+    {
+      "id": "art_2",
+      "name": "Dua Lipa",
+      "genre": "Pop / Nu-Disco",
+      "monthlyListeners": "68,910,400",
+      "followers": "42,100,000",
+      "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80",
+      "banner": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1200&auto=format&fit=crop&q=80",
+      "bio": "Global pop superstar renowned for futuristic disco grooves, multi-platinum hits, and record-breaking stadium world tours.",
+      "topTracks": ["Houdini", "Levitating", "Don't Start Now", "Training Season", "Dance the Night"],
+      "upcomingConcerts": [
+        { "city": "Paris, France", "venue": "Accor Arena", "date": "Nov 20, 2026", "ticketStatus": "Sold Out" },
+        { "city": "Berlin, Germany", "venue": "Uber Arena", "date": "Nov 28, 2026", "ticketStatus": "Available" }
+      ]
+    },
+    {
+      "id": "art_3",
+      "name": "The Weeknd",
+      "genre": "R&B / Synthwave",
+      "monthlyListeners": "105,320,000",
+      "followers": "85,400,000",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&auto=format&fit=crop&q=80",
+      "banner": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1200&auto=format&fit=crop&q=80",
+      "bio": "Canadian singer, songwriter, and producer known for cinematic storytelling, dark R&B, and 80s synth-pop masterworks.",
+      "topTracks": ["Blinding Lights", "Starboy", "Save Your Tears", "Die For You", "Creepin'"],
+      "upcomingConcerts": [
+        { "city": "Los Angeles, CA", "venue": "SoFi Stadium", "date": "Dec 10, 2026", "ticketStatus": "Available" },
+        { "city": "Toronto, Canada", "venue": "Rogers Centre", "date": "Dec 18, 2026", "ticketStatus": "Available" }
+      ]
+    },
+    {
+      "id": "art_4",
+      "name": "Tems",
+      "genre": "R&B / Afrobeats",
+      "monthlyListeners": "16,800,000",
+      "followers": "4,150,000",
+      "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&auto=format&fit=crop&q=80",
+      "banner": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&auto=format&fit=crop&q=80",
+      "bio": "Grammy-winning Nigerian vocal powerhouse and producer celebrated for her soul-stirring tone, songwriting, and international collaborations.",
+      "topTracks": ["Free Mind", "Me & U", "Love Me JeJe", "Higher", "Damages"],
+      "upcomingConcerts": [
+        { "city": "Chicago, IL", "venue": "United Center", "date": "Nov 25, 2026", "ticketStatus": "Available" }
+      ]
+    },
+    {
+      "id": "art_5",
+      "name": "Kendrick Lamar",
+      "genre": "Hip-Hop / Conscious Rap",
+      "monthlyListeners": "64,200,000",
+      "followers": "32,900,000",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&auto=format&fit=crop&q=80",
+      "banner": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&auto=format&fit=crop&q=80",
+      "bio": "Pulitzer Prize-winning hip-hop visionary acclaimed for lyrical complexity, conceptual albums, and generational cultural influence.",
+      "topTracks": ["Not Like Us", "HUMBLE.", "All The Stars", "Money Trees", "DNA."],
+      "upcomingConcerts": [
+        { "city": "Atlanta, GA", "venue": "Mercedes-Benz Stadium", "date": "Dec 05, 2026", "ticketStatus": "Selling Fast" }
+      ]
+    },
+    {
+      "id": "art_6",
+      "name": "Billie Eilish",
+      "genre": "Alternative / Pop",
+      "monthlyListeners": "89,400,000",
+      "followers": "55,200,000",
+      "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&auto=format&fit=crop&q=80",
+      "banner": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1200&auto=format&fit=crop&q=80",
+      "bio": "Multi-Academy and Grammy Award-winning singer-songwriter redefining modern alternative pop with whispered intimacy and bold production.",
+      "topTracks": ["BIRDS OF A FEATHER", "bad guy", "LUNCH", "WILDFLOWER", "Happier Than Ever"],
+      "upcomingConcerts": [
+        { "city": "Manchester, UK", "venue": "Co-op Live", "date": "Dec 12, 2026", "ticketStatus": "Sold Out" }
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "id": "trk_1",
+      "title": "City Boys",
+      "artist": "Burna Boy",
+      "artistId": "art_1",
+      "album": "I Told Them...",
+      "duration": "2:33",
+      "durationMs": 153000,
+      "genre": "Afrobeats",
+      "releaseDate": "2023-08-25",
+      "popularity": 92,
+      "cover": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&auto=format&fit=crop&q=80",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/bf/f9/5a/bff95ae1-1773-8d07-2d83-490327f29bb5/mzaf_1002446733182512613.plus.aac.p.m4a",
+      "lyricsPreview": "City boys, city boys, them no dey settle for less / When we step into the club, every girl want the address...",
+      "explicit": false
+    },
+    {
+      "id": "trk_2",
+      "title": "Houdini",
+      "artist": "Dua Lipa",
+      "artistId": "art_2",
+      "album": "Radical Optimism",
+      "duration": "3:05",
+      "durationMs": 185000,
+      "genre": "Pop",
+      "releaseDate": "2023-11-09",
+      "popularity": 95,
+      "cover": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&auto=format&fit=crop&q=80",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/44/14/c1/4414c11b-8517-5e16-4fb4-ca3fcb5be880/mzaf_10255866750058727402.plus.aac.p.m4a",
+      "lyricsPreview": "Okay, I come and I go / Tell me all the ways you need me / I'm not here for long, catch me or I go Houdini...",
+      "explicit": false
+    },
+    {
+      "id": "trk_3",
+      "title": "Blinding Lights",
+      "artist": "The Weeknd",
+      "artistId": "art_3",
+      "album": "After Hours",
+      "duration": "3:20",
+      "durationMs": 200000,
+      "genre": "Synthwave",
+      "releaseDate": "2020-03-20",
+      "popularity": 98,
+      "cover": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&auto=format&fit=crop&q=80",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b8/b5/e0/b8b5e0a6-c956-fbdf-7853-2df73c9c9dfc/mzaf_7306232706312480820.plus.aac.p.m4a",
+      "lyricsPreview": "I've been on my own for long enough / Maybe you can show me how to love, maybe...",
+      "explicit": false
+    },
+    {
+      "id": "trk_4",
+      "title": "Love Me JeJe",
+      "artist": "Tems",
+      "artistId": "art_4",
+      "album": "Born in the Wild",
+      "duration": "2:58",
+      "durationMs": 178000,
+      "genre": "Afrobeats",
+      "releaseDate": "2024-04-26",
+      "popularity": 89,
+      "cover": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&auto=format&fit=crop&q=80",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/91/97/35/919735d4-4bb5-0dc0-4fe4-fb7fe06b4991/mzaf_847849182335198080.plus.aac.p.m4a",
+      "lyricsPreview": "Love me jeje, love me tender / You are my sunshine, my defender...",
+      "explicit": false
+    },
+    {
+      "id": "trk_5",
+      "title": "Not Like Us",
+      "artist": "Kendrick Lamar",
+      "artistId": "art_5",
+      "album": "Not Like Us - Single",
+      "duration": "4:34",
+      "durationMs": 274000,
+      "genre": "Hip-Hop",
+      "releaseDate": "2024-05-04",
+      "popularity": 99,
+      "cover": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=80",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/21/5d/ea/215dea87-be41-61cf-d306-dd3e887cf7a8/mzaf_10373007684615264359.plus.aac.p.m4a",
+      "lyricsPreview": "Psst, I see dead people... / They not like us, they not like us, they not like us...",
+      "explicit": true
+    },
+    {
+      "id": "trk_6",
+      "title": "BIRDS OF A FEATHER",
+      "artist": "Billie Eilish",
+      "artistId": "art_6",
+      "album": "HIT ME HARD AND SOFT",
+      "duration": "3:16",
+      "durationMs": 196000,
+      "genre": "Alternative",
+      "releaseDate": "2024-05-17",
+      "popularity": 97,
+      "cover": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=80",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/65/5a/04/655a0439-d343-41bb-c87e-be9bbfe7ee38/mzaf_14959146594241639912.plus.aac.p.m4a",
+      "lyricsPreview": "I want you to stay 'til I'm in the grave / 'Til I rot away, dead and buried / 'Til I'm in the casket you carry...",
+      "explicit": false
+    }
+  ],
+  "genres": [
+    { "id": "afrobeats", "name": "Afrobeats", "color": "#ff7b00", "icon": "🔥" },
+    { "id": "pop", "name": "Pop", "color": "#00f2fe", "icon": "✨" },
+    { "id": "hip-hop", "name": "Hip-Hop", "color": "#9d4edd", "icon": "🎤" },
+    { "id": "r&b", "name": "R&B / Soul", "color": "#ff007f", "icon": "🎷" },
+    { "id": "electronic", "name": "Electronic", "color": "#00e5ff", "icon": "⚡" },
+    { "id": "rock", "name": "Rock & Alt", "color": "#e63946", "icon": "🎸" },
+    { "id": "synthwave", "name": "Synthwave", "color": "#c77dff", "icon": "🌆" }
+  ],
+  "projectMeta": {
+    "title": "Music Discovery Dashboard",
+    "student": "Omotoso David",
+    "course": "WDD 330 — Web Frontend Development II",
+    "milestone": "Week 5: Wireframes, API Integration Setup, Basic Search Functionality",
+    "architecture": "Modular Vanilla JavaScript (ESM) + Vite + Modern CSS Custom Properties",
+    "sources": [
+      { "name": "iTunes Search API", "type": "Live REST API (JSONP / CORS)", "purpose": "Live multi-entity search, audio previews, track metadata" },
+      { "name": "Spotify Web API Architecture", "type": "REST API Schema", "purpose": "Artist profiles, recommendations, track popularity" },
+      { "name": "Musixmatch / Lyrics Engine", "type": "Lyrics API Schema", "purpose": "Real-time & cached track lyric synchronization" },
+      { "name": "Local Curated Dataset", "type": "Structured JSON", "purpose": "High-availability offline fallback & instant testing" }
+    ]
+  }
+}
